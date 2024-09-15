@@ -1,0 +1,998 @@
+
+/*** Spinner Start ***/
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .8s ease-out, visibility 0s linear .0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.wow,
+.animated {
+    animation-duration: 2s !important;
+}
+
+/*** Spinner End ***/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+.back-to-top:hover {
+    background: var(--bs-dark);
+    color: var(--bs-primary);
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+    font-weight: 700 !important;
+    font-family: 'Open', sans-serif !important;
+}
+
+h4, h5, h6, .h4, .h5, .h6 {
+    font-weight: 600 !important;
+    font-family: 'Open', sans-serif !important;
+}
+
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+
+/*** Button Start ***/
+
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-md-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-lg-square {
+    width: 58px;
+    height: 58px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn.btn-primary:hover {
+    color: var(--bs-primary) !important;
+    background: var(--bs-dark) !important;
+    border-color: var(--bs-dark) !important;
+}
+
+.btn.btn-dark:hover {
+    color: var(--bs-dark) !important;
+    background: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+/*** Button End ***/
+
+
+/*** Topbar Start ***/
+.topbar .topbar-inner {
+    height: 45px;
+    padding: 10px 15px;
+    background: rgba(0, 145, 70, 0.5);
+}
+topbar a {
+    color: #ffffff !important;
+}
+.topbar a,
+.topbar a i {
+    transition: 0.5s;
+}
+
+.topbar a:hover,
+.topbar a i:hover {
+    color: var(--bs-primary) !important;
+}
+/*** Topbar End ***/
+
+
+/*** Navbar Start ***/
+.fixed-top {
+    transition: .5s;
+}
+
+.navbar {
+    border-bottom: 0px;
+    background: #ffffff;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 12px;
+    color: var(--bs-dark);
+    font-size: 17px;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        background: transparent !important;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: .5s;
+        opacity: 0;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        background: var(--bs-light) !important;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+.navbar-toggler {
+    background: var(--bs-secondary);
+    color: var(--bs-light) !important;
+    padding: 10px 20px;
+    border: 2px solid var(--bs-primary) !important;
+    box-shadow: none !important;
+}
+/*** Navbar End ***/
+
+
+/*** Hero Header ***/
+.hero-header {
+    margin-bottom: 6rem;
+    padding-top: 15rem;
+    padding-bottom: 6rem;
+    background-size: cover;
+    transform: scale(1);
+    transition: transform 10000ms ease, -webkit-transform 10000ms ease;
+}
+.banner1 {
+    background: url("../img/banner1.jpg"), center center no-repeat;
+}
+.banner2 {
+    background: url("../img/banner2.png"), center center no-repeat;
+}
+.banner3 {
+    background: url("../img/banner2.png"), center center no-repeat;
+}
+
+.hero-header .hero-header-inner {
+    padding: 2rem;
+} 
+
+.banner-sub {
+    background: rgb(241 193 82 / 50%);
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+.service-icon {
+    padding: 12px;
+    min-width: 50px;
+    background: rgba(0, 145, 70, 1);
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    margin-right: 10px;
+}
+
+.masjid-logo {
+    width: 200px;
+}
+
+@media (max-width: 992px) {
+    .hero-header {
+        padding-top: 12rem;
+    }
+}
+
+.hero-header .breadcrumb-item {
+    font-size: 18px;
+}
+/*** Hero Header ***/
+
+
+/*** About Start ***/
+.about a.btn.btn-light:hover {
+    background: var(--bs-dark) !important;
+    color: var(--bs-primary) !important;
+    border: 0;
+}
+/*** About End ***/
+
+
+/*** Activities Start ***/
+.activities .activities-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 45px rgba(12, 18, 20, .08);
+    transition: 0.5s;
+}
+
+.activities .activities-item:hover {
+    background: var(--bs-primary) !important;
+    color: var(--bs-dark) !important;
+}
+
+.activities .activities-item:hover a {
+    background: var(--bs-light) !important;
+    color: var(--bs-dark) !important;
+}
+
+.activities .activities-item:hover a:hover {
+    background: var(--bs-dark) !important;
+    color: var(--bs-primary) !important;
+}
+/*** Activities End ***/
+
+
+/*** Events Start ***/
+.event-item img {
+    transition: 0.5s;
+}
+
+.event .event-item a {
+    transition: 0.5s;
+}
+
+.event-item:hover img {
+    transition: 0.5s;
+    transform: scale(1.2)
+}
+
+.event-item a:hover {
+    background: var(--bs-dark);
+    color: var(--bs-primary);
+    opacity: 0.5s;
+}
+/*** Events End ***/
+
+
+/*** Sermon Start ***/
+.sermon .sermon-item {
+    height: 100%;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.sermon-item img {
+    transition: 0.5s;
+}
+
+.sermon-item:hover img {
+    transform: scale(1.2)
+}
+
+.sermon-item .sermon-meta a,
+.sermon-item .sermon-meta a i {
+    transition: 0.5s;
+}
+
+.sermon-item .sermon-meta a:hover,
+.sermon-item .sermon-meta a i:hover {
+    color: var(--bs-primary) !important;
+}
+/*** Sermon End ***/
+
+
+/*** Blog Start ***/
+.blog-item {
+    height: 100%;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.blog-item img {
+    transition: 0.5s;
+}
+
+.blog-item:hover img {
+    transform: scale(1.2)
+}
+
+.blog-item .blog-meta a,
+.blog-item .blog-meta a i {
+    transition: 0.5s;
+}
+
+.blog-item .blog-meta a:hover,
+.blog-item .blog-meta a i:hover {
+    color: var(--bs-primary) !important;
+}
+/*** Blog End ***/
+
+
+/*** Team Start ***/
+.team .team-img {
+    height: 100%;
+    padding: 25px;
+    background: var(--bs-white);
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.team .team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team .team-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .team-item img {
+    transition: 0.5s;
+}
+
+.team .team-item:hover img {
+    transform: scale(1.2);
+}
+
+.team .team-item .team-content {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   padding: 15px;
+   transform: translateX(-50%, -50%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   transition: 0.5s;
+}
+
+.team .team-item:hover .team-content {
+    opacity: 1;
+    background: rgba(241, 193, 82, .7);
+}
+
+.team .content {
+    text-align: center;
+    border-width: 0px 8px 8px;
+    border-style: solid solid solid;
+    border-color: rgb(245, 245, 245) rgb(245, 245, 245) rgb(245, 245, 245);
+    border-image: initial;
+    border-top: 0px;
+    padding: 10px;
+    min-height: 200px;
+}
+
+.team .content .pos {
+    color: rgb(0, 145, 70);
+    font-size: 14px;
+    margin: 0px 0px 13px;
+    transition: 0.3s;
+}
+
+.team .content p {
+    margin: 0px 0px 20px;
+}
+
+.team .content h3 {
+    font-size: 20px;
+    color: rgb(17, 17, 17);
+    margin: 0px 0px 15px;
+}
+
+
+/*** Team End ***/
+
+
+/*** testimonial Start ***/
+.testimonial-item {
+    background: var(--bs-light);
+    padding: 15px;
+}
+
+.testimonial-carousel .owl-item img {
+    border-radius: 50%;
+}
+
+.testimonial-carousel {
+    position: relative;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background: var(--bs-primary);
+    color: var(--bs-dark);
+    font-size: 22px;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover {
+    background: var(--bs-dark) !important;
+    color: var(--bs-primary) !important;
+}
+
+.testimonial-carousel .owl-nav .owl-next {
+    left: auto;
+    right: 0px;
+}
+
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--bs-dark) !important;
+    color: var(--bs-primary) !important;
+}
+
+.team-details {
+    display: block;
+    text-align: center;
+    h5 {
+        font-size: 1.10rem;
+        color: rgba(0, 145, 70, 1);
+    }
+}
+/*** testimonial End ***/
+
+.sub-header {
+    min-height: 40vh;
+    background: url("../img/banner1.jpg"), center center no-repeat;
+    margin-bottom: 60px;
+}
+.sub-header h1 {
+    padding-top: 28vh;
+    color: white;
+    text-align: center;
+}
+
+.muallim-item {
+    background: var(--bs-light);
+    padding: 0px;
+}
+
+
+.muallim-carousel {
+    position: relative;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.muallim-carousel .owl-nav .owl-prev,
+.muallim-carousel .owl-nav .owl-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background: var(--bs-primary);
+    color: var(--bs-dark);
+    font-size: 22px;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.muallim-carousel .owl-nav .owl-prev:hover {
+    background: var(--bs-dark) !important;
+    color: var(--bs-primary) !important;
+}
+
+.muallim-carousel .owl-nav .owl-next {
+    left: auto;
+    right: 0px;
+}
+
+.muallim-carousel .owl-nav .owl-next:hover {
+    background: var(--bs-dark) !important;
+    color: var(--bs-primary) !important;
+}
+
+/*** Prayer ***/
+
+.prayer-area .info {
+    padding-top: 130px;
+    overflow: hidden;
+}
+.prayer-area .info .sun {
+    height: 950px;
+    width: 950px;
+    position: relative;
+    margin: 0px auto -475px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    border-image: initial;
+    border-radius: 100%;
+}
+.prayer-area .info .sun .mid {
+    width: 288px;
+    height: 288px;
+    position: absolute;
+    top: 35%;
+    display: block;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    line-height: 144px;
+    border-radius: 100%;
+    background: rgb(229, 174, 73);
+    margin: auto;
+    transition: 0.3s;
+}
+
+.prayer-area .info .sun .mid::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    right: -25px;
+    top: -25px;
+    bottom: -25px;
+    border-radius: 100%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(0, 145, 70);
+    border-image: initial;
+}
+.prayer-area .info .sun .mid img {
+    display: inline-block;
+    position: relative;
+    z-index: 999;
+}
+.prayer-area .info .sun .mid::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    background: rgb(0, 145, 70);
+    border-radius: 100%;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico1 {
+    position: absolute;
+    left: -48px;
+    top: 251px;
+    display: block;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 168px;
+    background: center center no-repeat rgb(245, 245, 245);
+    border-radius: 100%;
+    transition: 0.3s;
+    background-position: center center;
+}
+.prayer-area .info .sun .ico1:before {
+    content: '';
+    position: absolute;
+    left: 105%;
+    right: 0;
+    transform: rotate(19deg);
+    top: 94%;
+    bottom: 0;
+    width: 180px;
+    height: 2px;
+    background: #f5f5f5;
+    transition: all 0.3s;
+}
+.prayer-area .info .sun .ico1:after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+    background-image: url(images/icon/2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s;
+}
+.prayer-area .info .sun .ico1:hover:before {
+    background: #009146;
+}
+.prayer-area .info .sun .ico1:hover:after {
+    background: url(../img/2h.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.prayer-area .info .sun .ico2 strong {
+    display: inline;
+    margin-top: 5px;
+    font-size: 20px;
+    color: rgb(17, 17, 17);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Droid Sans", sans-serif;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico2::before {
+    content: "";
+    position: absolute;
+    left: 72%;
+    transform: rotate(49deg);
+    top: 148%;
+    bottom: 0px;
+    width: 180px;
+    height: 2px;
+    background: rgb(245, 245, 245);
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico2::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    text-align: center;
+    background-image: url(../img/3.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    background-position: center center;
+    transition: 0.3s;
+}
+
+.prayer-area .info .sun .ico2 {
+    position: absolute;
+    left: 104px;
+    top: 27px;
+    display: block;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 168px;
+    background: center center no-repeat rgb(245, 245, 245);
+    border-radius: 100%;
+    transition: 0.3s;
+    background-position: center center;
+}
+.prayer-area .info .sun .ico2::before {
+    content: "";
+    position: absolute;
+    left: 72%;
+    transform: rotate(49deg);
+    top: 148%;
+    bottom: 0px;
+    width: 180px;
+    height: 2px;
+    background: rgb(245, 245, 245);
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico2::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    text-align: center;
+    background-image: url(../img/3.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    background-position: center center;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico2 strong {
+    display: inline;
+    margin-top: 5px;
+    font-size: 20px;
+    color: rgb(17, 17, 17);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Droid Sans", sans-serif;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico3:hover {
+    background-color: rgb(0, 145, 70);
+}
+.prayer-area .info .sun .ico3:hover::before {
+    background: rgb(0, 145, 70);
+}
+.prayer-area .info .sun .ico3::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    transform: rotate(0deg);
+    top: 119%;
+    width: 2px;
+    height: 180px;
+    margin: auto;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico3 strong {
+    display: inline;
+    margin-top: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Droid Sans", sans-serif;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico3:hover strong {
+    color: rgb(255, 255, 255);
+}
+.prayer-area .info .sun .ico3:hover::after {
+    background: url(../img/4h.png) center center no-repeat;
+    background-position: center center;
+}
+.prayer-area .info .sun .ico3::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    text-align: center;
+    background-image: url(../img/4.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    background-position: center center;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico4 {
+    position: absolute;
+    right: 104px;
+    top: 27px;
+    display: block;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 168px;
+    background: center center no-repeat rgb(245, 245, 245);
+    border-radius: 100%;
+    transition: 0.3s;
+    background-position: center center;
+}
+.prayer-area .info .sun .ico4::before {
+    content: "";
+    position: absolute;
+    right: 72%;
+    transform: rotate(-49deg);
+    top: 148%;
+    bottom: 0px;
+    width: 180px;
+    height: 2px;
+    background: rgb(245, 245, 245);
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico4 strong {
+    display: inline;
+    margin-top: 5px;
+    font-size: 20px;
+    color: rgb(17, 17, 17);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Droid Sans", sans-serif;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico4::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    text-align: center;
+    background-image: url(../img/5.webp);
+    background-repeat: no-repeat;
+    margin: auto;
+    background-position: center center;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico5 {
+    position: absolute;
+    right: -40px;
+    top: 251px;
+    display: block;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 168px;
+    background: center center no-repeat rgb(245, 245, 245);
+    border-radius: 100%;
+    transition: 0.3s;
+    background-position: center center;
+}
+.prayer-area .info .sun .ico5::before {
+    content: "";
+    position: absolute;
+    right: 105%;
+    transform: rotate(-19deg);
+    top: 94%;
+    bottom: 0px;
+    width: 180px;
+    height: 2px;
+    background: rgb(245, 245, 245);
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico5::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    text-align: center;
+    background-image: url(../img/6.webp);
+    background-repeat: no-repeat;
+    margin: auto;
+    background-position: center center;
+    transition: 0.3s;
+}
+.prayer-area .info .sun .ico5 strong {
+    display: inline;
+    margin-top: 5px;
+    font-size: 20px;
+    color: rgb(17, 17, 17);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Droid Sans", sans-serif;
+    transition: 0.3s;
+}
+
+
+/*** Footer Start ***/
+.footer {
+    margin-top: 6rem;
+    background: var(--bs-dark) !important;
+}
+
+.footer .footer-item p {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.footer .border-top,
+.footer .border-bottom {
+    border-color: rgba(255, 255, 255, .08) !important;
+}
+
+.footer button {
+    border: 0;
+    transition: 0.5s;
+}
+
+.footer button:hover {
+    background: var(--bs-dark);
+    color: var(--bs-primary);
+}
+
+.footer-item a.btn.btn-light:hover {
+    background: var(--bs-primary);
+    color: var(--bs-dark) !important;
+    border: var(--bs-primary);
+}
+
+.footer-item a,
+.footer-item a i {
+    transition: 0.5s;
+}
+
+.footer-item a:hover,
+.footer-item a i:hover {
+    color: var(--bs-primary) !important;
+}
+/*** Footer End ***/
+
+.login-container{
+    max-width: 500px !important;
+}
+
+body{
+	margin:0;
+	padding:0;
+}
+/* .container{
+	width:90%
+	margin:10px auto;
+} */
+.portfolio-menu{
+	text-align:center;
+}
+.portfolio-menu ul li{
+	display:inline-block;
+	margin:0;
+	list-style:none;
+	padding:10px 15px;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+
+.portfolio-item{
+	/*width:100%;*/
+}
+.portfolio-item .item{
+	/*width:303px;*/
+	float:left;
+	margin-bottom:10px;
+}
+.table-image{
+    max-height: 100px;
+}
+.image-listing-table{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.image-listing-table td, .image-listing-table th{
+    vertical-align: middle;
+}
